@@ -19,6 +19,7 @@
 		8444E4FE216EBB2F0036238C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8444E4FC216EBB2F0036238C /* Main.storyboard */; };
 		8444E500216EBB310036238C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8444E4FF216EBB310036238C /* Assets.xcassets */; };
 		8444E503216EBB310036238C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8444E501216EBB310036238C /* LaunchScreen.storyboard */; };
+		8484D1F821764A4A0020E5C5 /* TetrisBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8484D1F721764A4A0020E5C5 /* TetrisBoard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		8444E4FF216EBB310036238C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8444E502216EBB310036238C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8444E504216EBB310036238C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8484D1F721764A4A0020E5C5 /* TetrisBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TetrisBoard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				8444E4FA216EBB2F0036238C /* GameViewController.swift */,
 				8444E4FC216EBB2F0036238C /* Main.storyboard */,
 				8444E4FF216EBB310036238C /* Assets.xcassets */,
+				8484D1F721764A4A0020E5C5 /* TetrisBoard.swift */,
 				8444E501216EBB310036238C /* LaunchScreen.storyboard */,
 				8444E504216EBB310036238C /* Info.plist */,
 				843C12552175DDE000B5C2BE /* Sprites.atlas */,
@@ -173,6 +176,7 @@
 				8444E4F9216EBB2F0036238C /* GameScene.swift in Sources */,
 				8444E4FB216EBB2F0036238C /* GameViewController.swift in Sources */,
 				8444E4F3216EBB2F0036238C /* AppDelegate.swift in Sources */,
+				8484D1F821764A4A0020E5C5 /* TetrisBoard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
