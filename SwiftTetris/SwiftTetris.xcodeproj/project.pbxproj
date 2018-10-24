@@ -26,6 +26,7 @@
 		847C4532218121D800BDFC5C /* JShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C4531218121D800BDFC5C /* JShape.swift */; };
 		847C4534218123E800BDFC5C /* SShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C4533218123E800BDFC5C /* SShape.swift */; };
 		847C4536218129B000BDFC5C /* ZShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C4535218129B000BDFC5C /* ZShape.swift */; };
+		847C453821812E5100BDFC5C /* SwiftTetris.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C453721812E5100BDFC5C /* SwiftTetris.swift */; };
 		8484D1F821764A4A0020E5C5 /* TetrisBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8484D1F721764A4A0020E5C5 /* TetrisBoard.swift */; };
 		8484D1FA217651B00020E5C5 /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8484D1F9217651B00020E5C5 /* Block.swift */; };
 		8484D1FC21767E2D0020E5C5 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8484D1FB21767E2D0020E5C5 /* Shape.swift */; };
@@ -53,6 +54,7 @@
 		847C4531218121D800BDFC5C /* JShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JShape.swift; sourceTree = "<group>"; };
 		847C4533218123E800BDFC5C /* SShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SShape.swift; sourceTree = "<group>"; };
 		847C4535218129B000BDFC5C /* ZShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZShape.swift; sourceTree = "<group>"; };
+		847C453721812E5100BDFC5C /* SwiftTetris.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTetris.swift; sourceTree = "<group>"; };
 		8484D1F721764A4A0020E5C5 /* TetrisBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TetrisBoard.swift; sourceTree = "<group>"; };
 		8484D1F9217651B00020E5C5 /* Block.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
 		8484D1FB21767E2D0020E5C5 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				8444E4F8216EBB2F0036238C /* GameScene.swift */,
 				8484D1F9217651B00020E5C5 /* Block.swift */,
 				8484D1FB21767E2D0020E5C5 /* Shape.swift */,
+				847C453721812E5100BDFC5C /* SwiftTetris.swift */,
 				8444E4FA216EBB2F0036238C /* GameViewController.swift */,
 				8444E4FC216EBB2F0036238C /* Main.storyboard */,
 				8444E4FF216EBB310036238C /* Assets.xcassets */,
@@ -210,6 +213,7 @@
 				847C4534218123E800BDFC5C /* SShape.swift in Sources */,
 				8484D1FA217651B00020E5C5 /* Block.swift in Sources */,
 				847C452E21811C7000BDFC5C /* IShape.swift in Sources */,
+				847C453821812E5100BDFC5C /* SwiftTetris.swift in Sources */,
 				8444E4F3216EBB2F0036238C /* AppDelegate.swift in Sources */,
 				847C4536218129B000BDFC5C /* ZShape.swift in Sources */,
 				8484D1F821764A4A0020E5C5 /* TetrisBoard.swift in Sources */,
