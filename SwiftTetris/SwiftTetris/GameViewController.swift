@@ -49,6 +49,6 @@ class GameViewController: UIViewController {
     
     func didTick() {
         swiftTetris.fallingShape?.lowerShapeByOneRow()
-        scene.redrawShape(shape: swiftTetris.fallingShape! , completion:  {} )
+        scene.redrawShape(shape: swiftTetris.fallingShape! , completion: {} )
     }
 }
