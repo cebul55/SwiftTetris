@@ -10,7 +10,7 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
-class GameViewController: UIViewController {
+class GameViewController: UIViewController, SwiftTetrisDelegate {
     
     var scene : GameScene!
     var swiftTetris: SwiftTetris!
@@ -28,19 +28,10 @@ class GameViewController: UIViewController {
         
         scene.tick = didTick
         swiftTetris = SwiftTetris()
+        swiftTetris.delegate = self
         swiftTetris.beginGame()
         
         skView.presentScene(scene)
-        
-        
-        scene.addPreviewShapeToScene(shape: swiftTetris.nextShape! ){
-            self.swiftTetris.nextShape?.moveTo(column: StartingColumn, row: StartingRow)
-            self.scene.movePreviewShape(shape: self.swiftTetris.nextShape! ) {
-                let nextShapes = self.swiftTetris.newShape()
-                self.scene.startTicking()
-                self.scene.addPreviewShapeToScene(shape: nextShapes.nextShape!) {}
-            }
-        }
     }
 
     override var prefersStatusBarHidden: Bool {
@@ -48,7 +39,55 @@ class GameViewController: UIViewController {
     }
     
     func didTick() {
-        swiftTetris.fallingShape?.lowerShapeByOneRow()
-        scene.redrawShape(shape: swiftTetris.fallingShape! , completion: {} )
+        swiftTetris.letShapeFall()
     }
+    
+    func nextShape() {
+        let newShapes = swiftTetris.newShape()
+        
+        guard let fallingShape = newShapes.fallingShape else {
+            return
+        }
+        
+        self.scene.addPreviewShapeToScene(shape: newShapes.nextShape!) {}
+        self.scene.movePreviewShape(shape: fallingShape ) {
+            self.view.isUserInteractionEnabled = true
+            self.scene.startTicking()
+        }
+    }
+    
+    func gameDidBegin(swiftTetris: SwiftTetris) {
+        
+        if swiftTetris.nextShape != nil && swiftTetris.nextShape!.blocks[0].sprite == nil {
+            scene.addPreviewShapeToScene(shape: swiftTetris.nextShape! ) {
+                self.nextShape()
+            }
+        }
+        else {
+            nextShape()
+        }
+    }
+    
+    func gameDidEnd(swiftTetris: SwiftTetris) {
+        view.isUserInteractionEnabled = false
+        scene.stopTicking()
+    }
+    
+    func gameDidLevelUp(swiftTetris: SwiftTetris) {
+        
+    }
+    
+    func gameShapeDidDrop(swiftTetris: SwiftTetris) {
+        
+    }
+    
+    func gameShapeDidLand(swiftTetris: SwiftTetris) {
+        scene.stopTicking()
+        nextShape()
+    }
+    
+    func gameShapeDidMove(swiftTetris: SwiftTetris) {
+        scene.redrawShape(shape: swiftTetris.fallingShape! ) {}
+    }
+    
 }

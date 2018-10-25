@@ -72,7 +72,7 @@ class Shape : Hashable , CustomStringConvertible {
         return [:]
     }
     
-    var BottomBlocks : Array<Block> {
+    var bottomBlocks : Array<Block> {
         
         guard let bottomBlocks = bottomBlocksForOrientations[orientation] else {
             return []
@@ -130,9 +130,38 @@ class Shape : Hashable , CustomStringConvertible {
         }
     }
     
+    final func rotateClockwise() {
+        
+        let newOrientation = Orientation.rotate(orientation: orientation, clockwise: true)
+        rotateShape(orientation: newOrientation)
+        orientation = newOrientation
+    }
+    
+    final func rotateCounterClockwise (){
+        
+        let newOrientation = Orientation.rotate(orientation: orientation, clockwise: false)
+        rotateShape(orientation: newOrientation)
+        orientation = newOrientation
+    }
+    
     final func lowerShapeByOneRow() {
         
         shiftBy(columns:0, rows: 1)
+    }
+    
+    final func raiseShapeByOneRow() {
+        
+        shiftBy(columns: 0, rows: -1)
+    }
+    
+    final func shiftRightByOneColumn() {
+        
+        shiftBy(columns: 1, rows: 0)
+    }
+    
+    final func shiftLeftByOneColumn(){
+        
+        shiftBy(columns: -1, rows: 0)
     }
     
     final func shiftBy(columns: Int, rows: Int){
