@@ -36,7 +36,7 @@ class TShape : Shape {
             Orientation.Zero:           [(1, 0), (0, 1), (1, 1), (2, 1)],
             Orientation.Ninety:         [(2, 1), (1, 0), (1, 1), (1, 2)],
             Orientation.HunderedEighty: [(1, 2), (0, 1), (1, 1), (2, 1)],
-            Orientation.TwoSeventy:     [(1, 0), (1, 0), (1, 1), (1, 2)]
+            Orientation.TwoSeventy:     [(0, 1), (1, 0), (1, 1), (1, 2)]
         
         ]
     }
