@@ -119,6 +119,10 @@ class GameViewController: UIViewController, SwiftTetrisDelegate, UIGestureRecogn
     
     func gameDidBegin(swiftTetris: SwiftTetris) {
         
+        levelLabel.text = "\(swiftTetris.level)"
+        scoreLabel.text = "\(swiftTetris.score)"
+        scene.tickLengthMillis = TickLenghtLevelOne
+        
         if swiftTetris.nextShape != nil && swiftTetris.nextShape!.blocks[0].sprite == nil {
             scene.addPreviewShapeToScene(shape: swiftTetris.nextShape! ) {
                 self.nextShape()
@@ -132,9 +136,21 @@ class GameViewController: UIViewController, SwiftTetrisDelegate, UIGestureRecogn
     func gameDidEnd(swiftTetris: SwiftTetris) {
         view.isUserInteractionEnabled = false
         scene.stopTicking()
+        
+        scene.animateCollapsingLines(linesToRemove: swiftTetris.removeAllBlocks(), fallenBlocks: swiftTetris.removeAllBlocks()) {
+            swiftTetris.beginGame()
+        }
     }
     
     func gameDidLevelUp(swiftTetris: SwiftTetris) {
+        
+        levelLabel.text = "\(swiftTetris.level)"
+        if scene.tickLengthMillis >= 100 {
+            scene.tickLengthMillis -= 100
+        }
+        else if scene.tickLengthMillis > 50 {
+            scene.tickLengthMillis -= 50
+        }
         
     }
     
@@ -149,7 +165,19 @@ class GameViewController: UIViewController, SwiftTetrisDelegate, UIGestureRecogn
     
     func gameShapeDidLand(swiftTetris: SwiftTetris) {
         scene.stopTicking()
-        nextShape()
+        self.view.isUserInteractionEnabled = false
+        
+        let removedLines = swiftTetris.removeCompletedLines()
+        if removedLines.linesRemoved.count > 0 {
+            self.scoreLabel.text = "\(swiftTetris.score)"
+            scene.animateCollapsingLines(linesToRemove: removedLines.linesRemoved, fallenBlocks: removedLines.fallenBlocks) {
+                self.gameShapeDidLand(swiftTetris: swiftTetris)
+            }
+            
+        }
+        else {
+            nextShape()
+        }
     }
     
     func gameShapeDidMove(swiftTetris: SwiftTetris) {

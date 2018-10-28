@@ -129,6 +129,7 @@ class SwiftTetris {
     
     func removeCompletedLines() -> (linesRemoved: Array<Array<Block>>, fallenBlocks: Array<Array<Block>> ) {
         
+        print("remove")
         var removedLines = Array<Array<Block>>()
         
         for row in (1..<NumberRows).reversed() {

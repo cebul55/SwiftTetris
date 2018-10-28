@@ -51,7 +51,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="SCORE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSP-64-DTx" userLabel="LEVEL">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="LEVEL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSP-64-DTx" userLabel="LEVEL">
                                         <rect key="frame" x="8" y="8" width="84" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -75,7 +75,7 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="01h-HQ-rQp" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" constant="79" id="5dP-fU-qaM"/>
+                            <constraint firstItem="01h-HQ-rQp" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" constant="96" id="5dP-fU-qaM"/>
                             <constraint firstItem="EL1-Ks-BBc" firstAttribute="top" secondItem="01h-HQ-rQp" secondAttribute="bottom" constant="248" id="6Ak-mn-e7Z"/>
                             <constraint firstItem="EL1-Ks-BBc" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="252" id="7Oh-wA-MMH"/>
                             <constraint firstItem="01h-HQ-rQp" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="252" id="xy5-Wg-4MW"/>
